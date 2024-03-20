@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <h1  align="center">Detail of persons</h1>
+    <table border="1px" width="60%" cellpadding="10px" bgcolor="gray" align="center" length="90%">
+        <tr>
+            <th>NAME</th>
+            <th>MOBILE NUMBER</th>
+            <th>EMAIL</th>
+            <th>TASK NAME</th>
+            <th>TASK STATUS</th>
+            <th>DELETE DATA</th>
+            <TH>UPDATE DATA</TH>
+        </tr>
+        {% for i in ddata %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.contactnumber}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.taskname}}</td>
+            <td>{{i.mark}}</td>
+            <td><a href="/delete/{{i.id}}">DELETE</a></td>
+            <td><a href="/update/{{i.id}}">UPDATE</a></td>
+        </i<input>
+            {% endfor %}
+    </input>
+  </body>
+</html>
