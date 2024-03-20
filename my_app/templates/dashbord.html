@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <h1  align="center">Detail of persons</h1>
+    <table border="1px" width="60%" cellpadding="10px" bgcolor="gray" align="center" length="90%">
+        <tr>
+            <th>NAME</th>
+            <th>MOBILE NUMBER</th>
+            <th>EMAIL</th>
+            <th>ADDRESS</th>
+            <th>PROFILE PICTURE</th>
+            <td>{{data.name}}</td>
+        </tr>
+        {% for i in ddata %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.contactnumber}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address}}</td>
+            <td><img src="/media/{{i.image}}" height="200px" width="200px"></td>
+        </tr>
+            {% endfor %}
+    </table>
+  </body>
+</html>
